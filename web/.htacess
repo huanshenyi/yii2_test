@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+---------------------
+
+本文来自 づ奈何ā 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/weixin_42878826/article/details/81452548?utm_source=copy 
